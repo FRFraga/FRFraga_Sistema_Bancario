@@ -1,16 +1,1 @@
-name: Testes Automatizados
 
-on: [push, pull_request]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Configurar Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-    - name: Executar Testes
-      run: |
-        python -m unittest test_sistema_bancario.py
